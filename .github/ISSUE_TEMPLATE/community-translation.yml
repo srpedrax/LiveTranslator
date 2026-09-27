@@ -21,7 +21,6 @@ body:
       description: Selecione o arquivo .json exportado pelo mod.
     validations:
       required: true
-      accept: ".json"
 
   - type: checkboxes
     id: confirmation
