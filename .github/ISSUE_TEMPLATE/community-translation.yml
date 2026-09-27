@@ -1,5 +1,5 @@
 name: Enviar tradução comunitária
-description: Envie um patch JSON do Live Translator para a comunidade.
+description: Compartilhe um patch JSON exportado pelo Live Translator.
 title: "[Community Patch] "
 labels:
   - live-translator-patch
@@ -9,62 +9,24 @@ body:
       value: |
         ## Live Translator • envio comunitário
 
-        Envie seu patch de tradução em JSON.
-        O arquivo continuará anexado a esta Issue e poderá ser encontrado pelo Live Translator.
+        Anexe o arquivo `.json` exportado pelo Live Translator.
 
-  - type: input
-    id: modName
-    attributes:
-      label: Mod
-      description: Nome interno ou nome principal do mod.
-      placeholder: PathOfTerraria
-    validations:
-      required: true
-
-  - type: input
-    id: modVersion
-    attributes:
-      label: Versão do mod
-      description: Opcional. Informe a versão para ajudar na compatibilidade.
-      placeholder: 0.3.13
-    validations:
-      required: false
-
-  - type: dropdown
-    id: language
-    attributes:
-      label: Idioma
-      description: Idioma de destino do patch.
-      options:
-        - pt-BR
-        - en-US
-        - es-ES
-        - fr-FR
-        - de-DE
-        - it-IT
-        - nl-NL
-        - pl-PL
-        - ru-RU
-        - tr-TR
-        - ja-JP
-        - ko-KR
-        - zh-CN
-        - id-ID
-    validations:
-      required: true
+        O próprio arquivo já contém o mod, a versão, o idioma e as traduções.
+        Você não precisa preencher essas informações manualmente.
 
   - type: upload
     id: patchFile
     attributes:
-      label: Arquivo JSON
-      description: Selecione o arquivo .json exportado pelo Live Translator.
+      label: Patch do Live Translator
+      description: Selecione o arquivo .json exportado pelo mod.
     validations:
       required: true
+      accept: ".json"
 
   - type: checkboxes
     id: confirmation
     attributes:
       label: Confirmação
       options:
-        - label: Confirmo que este arquivo é um patch de tradução do Live Translator.
+        - label: Confirmo que quero compartilhar este patch com a comunidade.
           required: true
