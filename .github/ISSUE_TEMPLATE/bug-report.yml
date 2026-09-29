@@ -1,0 +1,47 @@
+name: Reportar bug
+description: Informe um problema encontrado no Live Translator.
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por reportar. Preencha apenas o necessário para conseguirmos reproduzir o problema.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: O que aconteceu?
+      description: Descreva o problema de forma objetiva.
+      placeholder: Explique o que aconteceu e o que você esperava que acontecesse.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Como reproduzir
+      description: Passos para fazer o problema acontecer novamente.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Versão do Live Translator
+      placeholder: Ex.: 0.14.2
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs ou informações adicionais
+      description: Se houver, arraste o arquivo de log, print ou outro arquivo aqui.
+    validations:
+      required: false
