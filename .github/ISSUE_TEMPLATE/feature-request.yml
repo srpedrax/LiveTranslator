@@ -1,0 +1,22 @@
+name: Dar sugestão
+description: Sugira uma melhoria ou recurso para o Live Translator.
+title: "[Sugestão] "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Sua sugestão
+      description: Explique o que você gostaria de adicionar ou melhorar.
+      placeholder: Descreva a ideia de forma direta.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Por que isso seria útil?
+      description: Opcional. Explique qual problema ou dificuldade essa ideia resolveria.
+    validations:
+      required: false
